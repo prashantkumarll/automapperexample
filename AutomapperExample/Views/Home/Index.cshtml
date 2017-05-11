@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AutomapperExample.Models.EmployeeSkillsDTO>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>SkillName</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.EmpName</td>
+                <td>@item.Skillname</td>
+                <td>@item.rating</td>
+            </tr>
+        }
+    </tbody>
+</table>
